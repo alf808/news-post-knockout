@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html><head><title>Freecodecamp News</title></head>
+<body>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-primary text-center"><h1>FreeCodeCamp News</h1></div>
+  </div>
+</div>
+<div class="container" data-bind="foreach: newsArticles">
+  <div class="row">
+    <div class="col-xs-12">
+   <div class="well">
+      <div class="media">
+  		<a class="pull-left" data-bind="attr: {href: newsUrl}" target="_blank">
+    		<img class="media-object img-responsive" data-bind="attr: {src: imageUrl}">
+  		</a>
+  		<div class="media-body">
+    		<a data-bind="attr: {href: newsUrl}" target="_blank"><h4 class="media-heading" data-bind="text: headline"></h4></a>
+        <p data-bind="text: description"></p>
+          <p class="text-left">posted by @<span data-bind="text: author"></span></p>
+          <ul class="list-inline list-unstyled">
+  			<li><span data-bind="text: timePosted"></span> <i class="glyphicon glyphicon-calendar"></i></li>
+            <li>|</li>
+            <span data-bind="text: numComments"></span> <i class="glyphicon glyphicon-comment"></i>  comments
+            <li>|</li>
+            <span data-bind="text: numVotes"></span> <i class="fa fa-thumbs-o-up"></i>
+			</ul>
+       </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!-- script src='https://raw.github.com/Teun/thenBy.js/master/thenBy.min.js'></script -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js'></script>
+<script src="fccnews.js"></script>
+
+</body>
+</html>
